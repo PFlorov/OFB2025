@@ -3,14 +3,14 @@
 public class Main {
     public static void main(String[] args) {
 
-    //Homework1.task1();
-    //Homework1.task2();
-      //Homework1.task4();
-        // Homework1.task5();
-       // Homework1.task6();
+    // Homework1.task1();
+    // Homework1.task2();
+    // Homework1.task4();
+    // Homework1.task5();
+    // Homework1.task6();
+    // Homework1.task7();
+    // Homework1.task8();
+
     }
-
-
-
 
 }

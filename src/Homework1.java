@@ -184,6 +184,30 @@ public class Homework1 {
 
         scanner.close();
     }
-}
+
+    public static void task8(){
+        Scanner scanner = new Scanner(System.in);
+
+        String seriesName = scanner.nextLine();
+        int episodeDuration = scanner.nextInt();
+        int breakDuration = scanner.nextInt();
+
+        double lunchTime = breakDuration / 8.0;
+        double restTime = breakDuration / 4.0;
+
+        double remainingTime = breakDuration - lunchTime - restTime;
+
+        if (remainingTime >= episodeDuration) {
+            double timeLeft = remainingTime - episodeDuration;
+            System.out.printf("You have enough time to watch %s and left with %.0f minutes free time.", seriesName, Math.ceil(timeLeft));
+        } else {
+            double neededTime = episodeDuration - remainingTime;
+            System.out.printf("You don't have enough time to watch %s, you need %.0f more minutes.", seriesName, Math.ceil(neededTime));
+        }
+
+        scanner.close();
+    }
+    }
+
 
 
