@@ -52,7 +52,7 @@ public class Homework1 {
         scanner.close();
     }
 
-    public static  void task4(){
+    public static void task4(){
             Scanner scanner = new Scanner(System.in);
 
             double puzzlePrice = 2.60;
