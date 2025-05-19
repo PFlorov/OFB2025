@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
 
     //Homework1.task1();
-
+    Homework1.task2();
     }
 
 

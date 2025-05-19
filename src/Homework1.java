@@ -24,6 +24,33 @@ public class Homework1 {
         scanner.close();
     }
 
+    public static void task2(){
+        Scanner scanner = new Scanner(System.in);
+        int intputNumber = scanner.nextInt();
+        double bonus = 0;
+
+        if(intputNumber <= 100){
+            bonus= 5;
+        }
+        else if (intputNumber > 1000){
+            bonus = intputNumber * 0.1;
+        }
+        else{
+            bonus = intputNumber * 0.2;
+        }
+
+        if(intputNumber % 2 == 0){
+            bonus = bonus + 1;
+        }
+        else if  (intputNumber % 10 == 5) {
+            bonus = bonus + 2;
+        }
+
+        System.out.println(bonus);
+        System.out.println(intputNumber + bonus);
+
+        scanner.close();
+    }
 
 
 }
