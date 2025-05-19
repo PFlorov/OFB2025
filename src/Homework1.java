@@ -93,5 +93,38 @@ public class Homework1 {
 
     }
 
+    public static void task5(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        double budget = scanner.nextDouble();
+        int extras = scanner.nextInt();
+        double priceForClothing= scanner.nextDouble();
+
+        double decorCost = budget * 0.10;
+        double totalPriceForClothing = extras * priceForClothing;
+
+        if (extras > 150) {
+            totalPriceForClothing *= 0.90;
+        }
+
+        double totalExpenses = decorCost + totalPriceForClothing;
+        double moneyLeft = budget - totalExpenses;
+
+        if (moneyLeft >= 0) {
+            System.out.println("Action!");
+            System.out.printf("Wingard starts filming with %.2f leva left.", moneyLeft);
+        }
+
+        else {
+
+            double moneyNeeded = Math.abs(moneyLeft);
+            System.out.println("Not enough money!");
+            System.out.printf("Wingard needs %.2f leva more.", moneyNeeded);
+        }
+
+    }
 
 }
+
+

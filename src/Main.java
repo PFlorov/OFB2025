@@ -5,7 +5,8 @@ public class Main {
 
     //Homework1.task1();
     //Homework1.task2();
-      //  Homework1.task4();
+      //Homework1.task4();
+        // Homework1.task5();
     }
 
 
