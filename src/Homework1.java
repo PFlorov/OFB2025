@@ -150,6 +150,40 @@ public class Homework1 {
 
         scanner.close();
     }
+
+    public static void task7(){
+        Scanner scanner = new Scanner(System.in);
+
+        double budget = scanner.nextDouble();
+        int videoCards = scanner.nextInt();
+        int processors = scanner.nextInt();
+        int ramMemory = scanner.nextInt();
+
+        double videoCardPrice = 250.0;
+        double videoCardsTotal = videoCards * videoCardPrice;
+
+        double processorPricePerUnit = videoCardsTotal * 0.35;
+        double processorsTotal = processors * processorPricePerUnit;
+
+        double ramMemoryPricePerUnit = videoCardsTotal * 0.10;
+        double ramMemoryTotal = ramMemory * ramMemoryPricePerUnit;
+
+        double totalCost = videoCardsTotal + processorsTotal + ramMemoryTotal;
+
+        if (videoCards > processors) {
+            totalCost *= 0.85;
+        }
+
+        if (budget >= totalCost) {
+            double remainingBudget = budget - totalCost;
+            System.out.printf("You have %.2f leva left!", remainingBudget);
+        } else {
+            double neededMoney = totalCost - budget;
+            System.out.printf("Not enough money! You need %.2f leva more!", neededMoney);
+        }
+
+        scanner.close();
+    }
 }
 
 
