@@ -125,6 +125,31 @@ public class Homework1 {
 
     }
 
+    public static void task6(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        double worldRecordInSec= scanner.nextDouble();
+        double distanceInMeters = scanner.nextDouble();
+        double timeInSecForOneMeter = scanner.nextDouble();
+
+        double timeForDistance = distanceInMeters * timeInSecForOneMeter;
+
+        double addedTime = (Math.floor(distanceInMeters / 15)) * 12.5;
+        double totalTime = timeForDistance + addedTime;
+
+        double quickChek = totalTime - worldRecordInSec;
+
+        if(totalTime > worldRecordInSec){
+            System.out.printf("No, he failed! He was %.2f seconds slower.",quickChek);
+        }
+        else  {
+            System.out.printf("Yes, he succeeded! The new world record is %.2f seconds.",totalTime);
+        }
+
+
+        scanner.close();
+    }
 }
 
 
