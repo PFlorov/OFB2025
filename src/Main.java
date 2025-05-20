@@ -11,6 +11,14 @@ public class Main {
     // Homework1.task7();
     // Homework1.task8();
 
+
+    /*
+    Homework2.task1();
+    Homework2.task2();
+    Homework2.task3();
+
+     */
+    Homework2.task4();
     }
 
 }
