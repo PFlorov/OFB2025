@@ -219,5 +219,43 @@ public class Homework2 {
         scanner.close();
     }
 
+    public static void task6(){
+        Scanner scanner = new Scanner(System.in);
+
+        int num = scanner.nextInt();
+
+        if (num >= -100 && num <= 100 && num != 0) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+
+        scanner.close();
+    }
+
+    public static void task7(){
+        Scanner scanner = new Scanner(System.in);
+
+        int hour = scanner.nextInt();
+        String dayOfWeek = scanner.next();
+
+        boolean isWorkingDay = dayOfWeek.equals("Monday") ||
+                dayOfWeek.equals("Tuesday") ||
+                dayOfWeek.equals("Wednesday") ||
+                dayOfWeek.equals("Thursday") ||
+                dayOfWeek.equals("Friday") ||
+                dayOfWeek.equals("Saturday");
+
+        boolean isWorkingHour = hour >= 10 && hour <= 18;
+
+        if (isWorkingDay && isWorkingHour) {
+            System.out.println("open");
+        } else {
+            System.out.println("closed");
+        }
+
+        scanner.close();
+    }
+
     }
 

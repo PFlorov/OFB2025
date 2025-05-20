@@ -18,6 +18,8 @@ public class Main {
     Homework2.task3();
     Homework2.task4();
     Homework2.task5();
+    Homework2.task6();
+    Homework2.task7();
      */
     }
 
