@@ -20,6 +20,11 @@ public class Main {
     Homework2.task5();
     Homework2.task6();
     Homework2.task7();
+    Homework2.task8();
+    Homework2.task9();
+    Homework2.task10();
+    Homework2.task11();
+    Homework2.task12();
      */
     }
 

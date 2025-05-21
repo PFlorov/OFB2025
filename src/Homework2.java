@@ -257,5 +257,231 @@ public class Homework2 {
         scanner.close();
     }
 
+    public static void task8(){
+        Scanner scanner = new Scanner(System.in);
+
+        String userInput = scanner.next();
+
+        switch (userInput){
+            case "Monday":
+            case "Tuesday":
+            case "Friday":
+                System.out.println(12);
+                break;
+
+            case "Wednesday":
+            case "Thursday":
+                System.out.println(14);
+                break;
+
+            case "Saturday":
+            case "Sunday":
+                System.out.println(16);
+                break;
+
+            default :
+                System.out.println("Enter a valid user input");
+                break;
+        }
+        scanner.close();
+    }
+
+    public static void task9(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        String fruitOrVegetable= scanner.next();
+
+        switch(fruitOrVegetable){
+
+            case "banana":
+            case "apple":
+            case "kiwi":
+            case "cherry":
+            case "lemon":
+            case "grapes":
+                System.out.println("fruit");
+                break;
+
+            case "tomato":
+            case "cucumber":
+            case "pepper":
+            case "carrot":
+
+                System.out.println("vegetable");
+                break;
+
+            default:
+                System.out.println("unknown");
+                break;
+        }
+
+        scanner.close();
+    }
+
+    public static void task10(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        int input = scanner.nextInt();
+
+     boolean isValid = (input >= 100 && input <= 200) || input == 0;
+
+     if (!isValid){
+         System.out.println("invalid");
+     }
+
+        scanner.close();
+    }
+
+    public static void task11(){
+
+        Scanner scanner = new Scanner(System.in);
+
+        String fruit = scanner.nextLine();
+        String dayOfWeek = scanner.nextLine();
+        double quantity = scanner.nextDouble();
+        double price = 0;
+        boolean isValidInput = true;
+
+
+        if (dayOfWeek.equals("Monday") || dayOfWeek.equals("Tuesday") ||
+                dayOfWeek.equals("Wednesday") || dayOfWeek.equals("Thursday") ||
+                dayOfWeek.equals("Friday")) {
+
+            switch (fruit) {
+                case "banana":
+                    price = 2.50;
+                    break;
+                case "apple":
+                    price = 1.20;
+                    break;
+                case "orange":
+                    price = 0.85;
+                    break;
+                case "grapefruit":
+                    price = 1.45;
+                    break;
+                case "kiwi":
+                    price = 2.70;
+                    break;
+                case "pineapple":
+                    price = 5.50;
+                    break;
+                case "grapes":
+                    price = 3.85;
+                    break;
+                default:
+                    isValidInput = false;
+                    break;
+            }
+        }
+
+        else if (dayOfWeek.equals("Saturday") || dayOfWeek.equals("Sunday")) {
+
+            switch (fruit) {
+                case "banana":
+                    price = 2.70;
+                    break;
+                case "apple":
+                    price = 1.25;
+                    break;
+                case "orange":
+                    price = 0.90;
+                    break;
+                case "grapefruit":
+                    price = 1.60;
+                    break;
+                case "kiwi":
+                    price = 3.00;
+                    break;
+                case "pineapple":
+                    price = 5.60;
+                    break;
+                case "grapes":
+                    price = 4.20;
+                    break;
+                default:
+                    isValidInput = false;
+                    break;
+            }
+        }
+
+        else {
+            isValidInput = false;
+        }
+
+
+        if (isValidInput) {
+            double totalCost = price * quantity;
+            System.out.printf("%.2f", totalCost); // Форматиране до 2
+        } else {
+            System.out.println("error");
+        }
+
+        scanner.close();
+    }
+
+    public static void task12(){
+        Scanner scanner = new Scanner(System.in);
+
+        String city = scanner.nextLine();
+        double sales = scanner.nextDouble();
+        double commission = 0;
+        boolean isValidInput = true;
+
+
+        if (sales < 0) {
+            isValidInput = false;
+        } else {
+            switch (city) {
+                case "Sofia":
+                    if (sales >= 0 && sales <= 500) {
+                        commission = sales * 0.05;
+                    } else if (sales > 500 && sales <= 1000) {
+                        commission = sales * 0.07;
+                    } else if (sales > 1000 && sales <= 10000) {
+                        commission = sales * 0.08;
+                    } else if (sales > 10000) {
+                        commission = sales * 0.12;
+                    }
+                    break;
+                case "Varna":
+                    if (sales >= 0 && sales <= 500) {
+                        commission = sales * 0.045;
+                    } else if (sales > 500 && sales <= 1000) {
+                        commission = sales * 0.075;
+                    } else if (sales > 1000 && sales <= 10000) {
+                        commission = sales * 0.10;
+                    } else if (sales > 10000) {
+                        commission = sales * 0.13;
+                    }
+                    break;
+                case "Plovdiv":
+                    if (sales >= 0 && sales <= 500) {
+                        commission = sales * 0.055;
+                    } else if (sales > 500 && sales <= 1000) {
+                        commission = sales * 0.08;
+                    } else if (sales > 1000 && sales <= 10000) {
+                        commission = sales * 0.12;
+                    } else if (sales > 10000) {
+                        commission = sales * 0.145;
+                    }
+                    break;
+                default:
+                    isValidInput = false;
+                    break;
+            }
+        }
+
+        if (isValidInput) {
+            System.out.printf("%.2f", commission);
+        } else {
+            System.out.println("error");
+        }
+
+        scanner.close();
+    }
+
     }
 
