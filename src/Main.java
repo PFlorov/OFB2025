@@ -32,7 +32,13 @@ public class Main {
      Homework3_L3.task1();
      Homework3_L3.task2();
      Homework3_L3.task3();
+     Homework3_L3.task4();
+     Homework3_L3.task5();
+     Homework3_L3.task6();
+     Homework3_L3.task7();
+     Homework3_L3.task8();
      */
+        Homework3_L3.task9();
     }
 
 }
