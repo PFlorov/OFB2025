@@ -3,28 +3,35 @@
 public class Main {
     public static void main(String[] args) {
 
-    // Homework1.task1();
-    // Homework1.task2();
-    // Homework1.task4();
-    // Homework1.task5();
-    // Homework1.task6();
-    // Homework1.task7();
-    // Homework1.task8();
+    // Homework1_L2.task1();
+    // Homework1_L2.task2();
+    // Homework1L_2.task4();
+    // Homework1L_2.task5();
+    // Homework1_L2.task6();
+    // Homework1_L2.task7();
+    // Homework1_L2.task8();
 
 
     /*
-    Homework2.task1();
-    Homework2.task2();
-    Homework2.task3();
-    Homework2.task4();
-    Homework2.task5();
-    Homework2.task6();
-    Homework2.task7();
-    Homework2.task8();
-    Homework2.task9();
-    Homework2.task10();
-    Homework2.task11();
-    Homework2.task12();
+    Homework2_L2.task1();
+    Homework2_L2.task2();
+    Homework2_L2.task3();
+    Homework2_L2.task4();
+    Homework2_L2.task5();
+    Homework2_L2.task6();
+    Homework2_L2.task7();
+    Homework2_L2.task8();
+    Homework2_L2.task9();
+    Homework2_L2.task10();
+    Homework2_L2.task11();
+    Homework2_L2.task12();
+     */
+
+
+    /*
+     Homework3_L3.task1();
+     Homework3_L3.task2();
+     Homework3_L3.task3();
      */
     }
 

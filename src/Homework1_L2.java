@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Homework1 {
+public class Homework1_L2 {
 
 
     public static void task1(){
