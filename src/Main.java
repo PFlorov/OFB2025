@@ -39,6 +39,12 @@ public class Main {
      Homework3_L3.task8();
      Homework3_L3.task9();
      */
+
+
+    //Homework1_L4.task1();
+    //Homework1_L4.task2();
+    //Homework1_L4.task3();
+    Homework1_L4.task5();
     }
 
 }
