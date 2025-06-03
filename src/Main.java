@@ -44,7 +44,8 @@ public class Main {
     //Homework1_L4.task1();
     //Homework1_L4.task2();
     //Homework1_L4.task3();
-    Homework1_L4.task5();
+    //Homework1_L4.task4();
+    //Homework1_L4.task5();
     }
 
 }
