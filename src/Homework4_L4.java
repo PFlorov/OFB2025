@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Collections;
 
-public class Homework1_L4 {
+public class Homework4_L4 {
 
     static void task1(){
 

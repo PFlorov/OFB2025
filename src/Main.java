@@ -50,7 +50,7 @@ public class Main {
     //Homework1_L4.task7();
     //Homework1_L4.task8();
     //Homework1_L4.task9();
-    Homework1_L4.task10();
+    //Homework1_L4.task10();
     }
 
 }
