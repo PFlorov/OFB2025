@@ -51,6 +51,11 @@ public class Main {
     //Homework1_L4.task8();
     //Homework1_L4.task9();
     //Homework1_L4.task10();
+
+
+    //Homework4_L4_2.task1();
+    //Homework4_L4_2.task2();
+    //Homework4_L4_2.task3();
     }
 
 }
