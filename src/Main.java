@@ -56,6 +56,11 @@ public class Main {
     //Homework4_L4_2.task1();
     //Homework4_L4_2.task2();
     //Homework4_L4_2.task3();
+    //Homework4_L4_2.task4();
+    //Homework4_L4_2.task5();
+    //Homework4_L4_2.task6();
+    //Homework4_L4_2.task7();
+    //Homework4_L4_2.task8();
     }
 
 }
