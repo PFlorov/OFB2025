@@ -1,4 +1,4 @@
-import java.util.Objects;
+
 import java.util.Scanner;
 
 public class Homework5_L4_1 {
