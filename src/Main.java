@@ -70,6 +70,16 @@ public class Main {
     //Homework5_L4_1.task6();
     //Homework5_L4_1.task7();
     //Homework5_L4_1.task8();
+
+
+    //Homework5_L4_2.task1();
+    //Homework5_L4_2.task2();
+    //Homework5_L4_2.task3();
+    //Homework5_L4_2.task4();
+    //Homework5_L4_2.task5();
+    //Homework5_L4_2.task6();
+    Homework5_L4_2.task7();
+
     }
 
 }
