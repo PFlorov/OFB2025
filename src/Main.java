@@ -78,7 +78,7 @@ public class Main {
     //Homework5_L4_2.task4();
     //Homework5_L4_2.task5();
     //Homework5_L4_2.task6();
-    Homework5_L4_2.task7();
+    //Homework5_L4_2.task7();
 
     }
 
