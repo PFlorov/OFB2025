@@ -80,6 +80,12 @@ public class Main {
     //Homework5_L4_2.task6();
     //Homework5_L4_2.task7();
 
+
+    //BasicsFinal.gymnastics();
+    //BasicsFinal.oscarsWeek();
+    //BasicsFinal.wsch();
+
+
     }
 
 }
