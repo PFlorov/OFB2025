@@ -84,6 +84,13 @@ public class Main {
     //BasicsFinal.gymnastics();
     //BasicsFinal.oscarsWeek();
     //BasicsFinal.wsch();
+    //BasicsFinal.cinemaTickets();
+    //BasicsFinal.darts();
+    //BasicsFinal.numberWars();
+    //BasicsFinal.movieRating();
+    //BasicsFinal.tennis();
+    //BasicsFinal.basketBall();
+    //BasicsFinal.movieTicketLast();
 
 
     }
