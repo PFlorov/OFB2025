@@ -92,7 +92,7 @@ public class Main {
     //BasicsFinal.basketBall();
     //BasicsFinal.movieTicketLast();
 
-
+    Shake.Shake();
     }
 
 }
