@@ -102,6 +102,16 @@ public class Main {
     //Homework_arrays_L1_1.reverseArrayOfStrings();
     //Homework_arrays_L1_1.evenOddSub();
     //Homework_arrays_L1_1.eqArr();
+
+
+    //Homework_arrays_L1_2.train();
+    //Homework_arrays_L1_2.train();
+    //Homework_arrays_L1_2.zigZag();
+    //Homework_arrays_L1_2.rotations();
+    //Homework_arrays_L1_2.top();
+    //Homework_arrays_L1_2.eqSums();
+    //Homework_arrays_L1_2.magic();
+
     }
 
 }
