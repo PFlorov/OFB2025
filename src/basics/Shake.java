@@ -1,8 +1,10 @@
+package basics;
+
 import java.util.Scanner;
 public class Shake {
 
 
-  static void Shake(){
+ public static void Shake(){
     Scanner scanner = new Scanner(System.in);
 
     StringBuilder text = new StringBuilder(scanner.nextLine());

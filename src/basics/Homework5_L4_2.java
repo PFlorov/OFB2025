@@ -1,3 +1,5 @@
+package basics;
+
 import java.util.Scanner;
 public class Homework5_L4_2 {
 

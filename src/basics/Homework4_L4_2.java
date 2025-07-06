@@ -1,4 +1,5 @@
-import javax.net.ssl.SSLContext;
+package basics;
+
 import java.util.Scanner;
 
 
