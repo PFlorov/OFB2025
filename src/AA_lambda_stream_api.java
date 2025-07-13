@@ -71,6 +71,8 @@ public class AA_lambda_stream_api {
 
     scanner.close();
   }
+  
+
 
   }
 
