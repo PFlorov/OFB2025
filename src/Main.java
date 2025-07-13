@@ -112,6 +112,12 @@ public class Main {
     //Homework_arrays_L1_2.eqSums();
     //Homework_arrays_L1_2.magic();
 
+
+//AA_lambda_stream_api.countRealNum();
+//AA_lambda_stream_api.oddOcurance();
+//AA_lambda_stream_api.wordFilter();
+//AA_lambda_stream_api.wordSynonym();
+
     }
 
 }
