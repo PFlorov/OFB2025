@@ -118,6 +118,11 @@ public class Main {
 //AA_lambda_stream_api.wordFilter();
 //AA_lambda_stream_api.wordSynonym();
 
+    //MapAndSet07_HW01.parkingLot();
+    //MapAndSet07_HW01.party();
+    //MapAndSet07_HW01.voina();
+    //MapAndSet07_HW01.count();
+    //MapAndSet07_HW01.academy();
     }
 
 }
