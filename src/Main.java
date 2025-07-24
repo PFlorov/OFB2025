@@ -123,6 +123,11 @@ public class Main {
     //MapAndSet07_HW01.voina();
     //MapAndSet07_HW01.count();
     //MapAndSet07_HW01.academy();
+
+
+    //MapAndSet07_HW02.username();
+
+
     }
 
 }
