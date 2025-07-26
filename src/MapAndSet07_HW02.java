@@ -1,4 +1,6 @@
 import java.util.*;
+import java.util.stream.Collectors;
+
 public class MapAndSet07_HW02 {
 
   public static void username(){
@@ -159,4 +161,187 @@ public class MapAndSet07_HW02 {
 
     scanner.close();
   }
+
+  public static void cards(){
+    Scanner scanner = new Scanner(System.in);
+    Map<String, Set<String>> playerHands = new LinkedHashMap<>();
+
+    Map<String, Integer> powerValues = new HashMap<>();
+    for (int i = 2; i <= 10; i++) {
+      powerValues.put(String.valueOf(i), i);
+    }
+    powerValues.put("J", 11);
+    powerValues.put("Q", 12);
+    powerValues.put("K", 13);
+    powerValues.put("A", 14);
+
+    Map<Character, Integer> typeMultipliers = new HashMap<>();
+    typeMultipliers.put('S', 4);
+    typeMultipliers.put('H', 3);
+    typeMultipliers.put('D', 2);
+    typeMultipliers.put('C', 1);
+
+    while (scanner.hasNextLine()) {
+      String line = scanner.nextLine();
+      if (line.endsWith("JOKER")) {
+        break;
+      }
+
+      String[] parts = line.split(": ");
+      String personName = parts[0];
+      String[] cards = parts[1].split(", ");
+
+      playerHands.putIfAbsent(personName, new HashSet<>());
+
+      for (String card : cards) {
+        playerHands.get(personName).add(card);
+      }
+    }
+
+    for (Map.Entry<String, Set<String>> entry : playerHands.entrySet()) {
+      String personName = entry.getKey();
+      Set<String> cardsInHand = entry.getValue();
+      long totalValue = 0;
+
+      for (String card : cardsInHand) {
+        String powerStr;
+        char typeChar;
+
+        if (card.length() == 3) {
+          powerStr = card.substring(0, 2);
+          typeChar = card.charAt(2);
+        } else {
+          powerStr = card.substring(0, 1);
+          typeChar = card.charAt(1);
+        }
+
+        int powerValue = powerValues.get(powerStr);
+        int typeMultiplier = typeMultipliers.get(typeChar);
+
+        totalValue += (long) powerValue * typeMultiplier;
+      }
+      System.out.println(personName + ": " + totalValue);
+    }
+
+    scanner.close();
+  }
+
+
+
+  // HW 03
+
+  public static void catapult(){
+    Scanner scanner = new Scanner(System.in);
+
+    int numPiles = Integer.parseInt(scanner.nextLine());
+    ArrayDeque<Integer> walls = Arrays.stream(scanner.nextLine().split(" "))
+        .map(Integer::parseInt)
+        .collect(Collectors.toCollection(ArrayDeque::new));
+
+    ArrayDeque<Integer> rocks = new ArrayDeque<>();
+
+    for (int i = 1; i <= numPiles; i++) {
+      if (walls.isEmpty()) {
+        break;
+      }
+
+      if (i % 3 == 0) {
+        int newWall = Integer.parseInt(scanner.nextLine());
+        walls.add(newWall);
+      }
+
+      Arrays.stream(scanner.nextLine().split(" "))
+          .map(Integer::parseInt)
+          .forEach(rocks::push);
+
+      while (!rocks.isEmpty() && !walls.isEmpty()) {
+        int currentRock = rocks.peek();
+        int currentWall = walls.peek();
+
+        if (currentRock > currentWall) {
+          rocks.pop();
+          walls.removeFirst();
+          currentRock -= currentWall;
+          if (currentRock > 0) {
+            rocks.push(currentRock);
+          }
+        } else if (currentWall > currentRock) {
+          rocks.pop();
+          walls.removeFirst();
+          currentWall -= currentRock;
+          walls.addFirst(currentWall);
+        } else {
+          rocks.pop();
+          walls.removeFirst();
+        }
+      }
+    }
+
+    if (!walls.isEmpty()) {
+      System.out.println(
+          "Walls left: " +
+              walls.stream().map(String::valueOf).collect(Collectors.joining(", "))
+      );
+    } else {
+      System.out.println(
+          "Rocks left: " +
+              rocks.stream()
+                  .map(String::valueOf)
+                  .collect(Collectors.joining(", "))
+      );
+    }
+
+    scanner.close();
+  }
+
+
+  // HW 05
+  public static void travelMap(){
+    Scanner scanner = new Scanner(System.in);
+
+    Map<String, Map<String, Integer>> destinations = new TreeMap<>();
+
+    String line;
+    while (!(line = scanner.nextLine()).equals("END")) {
+      String[] parts = line.split(" > ");
+      String country = parts[0];
+      String town = parts[1];
+      int cost = Integer.parseInt(parts[2]);
+
+      destinations.putIfAbsent(country, new LinkedHashMap<>());
+
+      Map<String, Integer> townsInCountry = destinations.get(country);
+
+
+      if (!townsInCountry.containsKey(town) || cost < townsInCountry.get(town)) {
+        townsInCountry.put(town, cost);
+      }
+    }
+
+    for (Map.Entry<String, Map<String, Integer>> countryEntry : destinations.entrySet()) {
+      String countryName = countryEntry.getKey();
+      Map<String, Integer> towns = countryEntry.getValue();
+
+
+
+      towns
+          .entrySet()
+          .stream()
+          .sorted(Map.Entry.comparingByValue())
+          .forEach(townEntry ->
+              System.out.printf(
+                  "%s -> %s -> %d ",
+                  countryName,
+                  townEntry.getKey(),
+                  townEntry.getValue()
+              )
+          );
+      System.out.println();
+    }
+
+    scanner.close();
+
+  }
+
+
 }
